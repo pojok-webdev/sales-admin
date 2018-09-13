@@ -1,0 +1,29 @@
+<h1>Form Visit</h1>
+<div class="example-container">
+  <mat-form-field>
+    <input matInput [(ngModel)]="visit.client" placeholder="Nama Pelanggan">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="visit.address" placeholder="Alamat">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="visit.pic" placeholder="Contact Person">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="visit.position" placeholder="Jabatan">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="visit.phone" placeholder="Contact Number">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="visit.aim" placeholder="Keperluan">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select [(ngModel)]="visit.transport" placeholder="Kendaraan">
+      <mat-option value="option">Mobil Pribadi</mat-option>
+      <mat-option value="option">Motor Pribadi</mat-option>
+      <mat-option value="option">Mobil Kantor</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button (click)="save(visit)">Simpan</button>
+</div>
