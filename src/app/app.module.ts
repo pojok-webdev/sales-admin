@@ -11,11 +11,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { VisitAddComponent } from './visit-add/visit-add.component';
+import { VisitEditComponent } from './visit-edit/visit-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
     VisitsComponent,
-    VisitAddComponent
+    VisitAddComponent,
+    VisitEditComponent
   ],
   imports: [
     BrowserModule,

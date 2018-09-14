@@ -1,4 +1,6 @@
-<h1>Form Visit</h1>
+<p>
+  Edit Visit
+</p>
 <div class="example-container">
   <mat-form-field>
     <input matInput [(ngModel)]="visit.client" placeholder="Nama Pelanggan">
@@ -25,5 +27,5 @@
       <mat-option value="2">Mobil Kantor</mat-option>
     </mat-select>
   </mat-form-field>
-  <button mat-button (click)="save(visit)">Simpan</button>
+  <button mat-button (click)="update(visit)">Simpan</button>
 </div>

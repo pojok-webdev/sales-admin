@@ -8,11 +8,11 @@ import { VisitService } from '../visit.service';
 })
 export class VisitsComponent implements OnInit {
 dataSource
-displayedColumns = ["client","address","pic","position","phone"]
+displayedColumns = ["client","address","pic","position","phone","actions"]
   constructor(
     private visitService : VisitService
   ) {
-    this.visitService.get(result => {
+    this.visitService.gets(result => {
       console.log("datasource",result)
       this.dataSource = result
     })
