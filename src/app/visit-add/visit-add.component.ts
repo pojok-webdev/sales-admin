@@ -23,6 +23,7 @@ export class VisitAddComponent implements OnInit {
   save(visit){
     this.visitService.save(visit,result => {
       console.log("Result",result)
+      window.location.href = '/visits'
     })
   }
 }

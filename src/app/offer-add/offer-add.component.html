@@ -1,0 +1,42 @@
+<h1>Form Offer</h1>
+<div class="example-container">
+        <mat-form-field>
+            <input matInput [(ngModel)]="offer.kdoffer" placeholder="Offering Code">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="offer.offerdate" placeholder="Offer Date">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="offer.clientname" placeholder="Client Name">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="offer.address" placeholder="Address">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="offer.email" placeholder="email">
+          </mat-form-field>        
+        <mat-form-field>
+            <input matInput [(ngModel)]="offer.pic" placeholder="PIC">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="offer.phone" placeholder="Phone">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="offer.service" placeholder="Service">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="offer.price" placeholder="Price">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="offer.description" placeholder="Description">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select [(ngModel)]="offer.sale_id" placeholder="Kendaraan">
+              <mat-option value="0">Mobil Pribadi</mat-option>
+              <mat-option value="1">Motor Pribadi</mat-option>
+              <mat-option value="2">Mobil Kantor</mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+  <button mat-button (click)="save(offer)">Simpan</button>
+</div>
