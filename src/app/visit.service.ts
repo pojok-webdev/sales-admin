@@ -55,7 +55,7 @@ export class VisitService {
     )
   }
   remove(visit,callback){
-    this.obj = this.http.post('http://localhost:2019/remove',visit)
+    this.obj = this.http.get('http://localhost:2019/remove/'+visit.id)
     this.obj.subscribe(
       data => {
         callback(data)

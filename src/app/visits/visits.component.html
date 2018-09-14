@@ -29,7 +29,7 @@
     <td mat-cell *matCellDef="let element">
       <mat-select placeholder="Actions">
         <mat-option routerLink="/visit-edit/{{element.id}}">Edit</mat-option>
-        <mat-option>Remove</mat-option>
+        <mat-option (click)="remove(element)">Remove</mat-option>
       </mat-select>
     </td>
   </ng-container>
