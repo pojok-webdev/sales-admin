@@ -13,13 +13,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { VisitAddComponent } from './visit-add/visit-add.component';
 import { VisitEditComponent } from './visit-edit/visit-edit.component';
 import { VisitRemoveDialogComponent } from './visit-remove-dialog/visit-remove-dialog.component';
+import { OffersComponent } from './offers/offers.component';
 @NgModule({
   declarations: [
     AppComponent,
     VisitsComponent,
     VisitAddComponent,
     VisitEditComponent,
-    VisitRemoveDialogComponent
+    VisitRemoveDialogComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,

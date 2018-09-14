@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs'
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { AppvarService } from './appvar.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class VisitService {
-  obj : Observable<any>
-
+export class OfferService {
+obj: Observable<any>
   constructor(
     private http : HttpClient,
     private appvar : AppvarService
   ) { }
   gets(callback){
-    this.obj = this.http.get(this.appvar.server+'visitgets')
+    this.obj = this.http.get(this.appvar.server+'offergets')
     this.obj.subscribe(
       data => {
         callback(data)
@@ -25,18 +24,7 @@ export class VisitService {
     )
   }
   get(obj,callback){
-    this.obj = this.http.get(this.appvar.server+'visitget/'+obj.id)
-    this.obj.subscribe(
-      data => {
-        callback(data[0])
-      },
-      err => {
-        callback(err)
-      }
-    )
-  }
-  save(visit,callback){
-    this.obj = this.http.post(this.appvar.server+'visitsave',visit)
+    this.obj = this.http.get(this.appvar.server+'offerget/'+obj.id)
     this.obj.subscribe(
       data => {
         callback(data)
@@ -46,8 +34,8 @@ export class VisitService {
       }
     )
   }
-  update(visit, callback){
-    this.obj = this.http.post(this.appvar.server+'visitupdate',visit)
+  save(obj,callback){
+    this.obj = this.http.post(this.appvar.server+'offersave',obj)
     this.obj.subscribe(
       data => {
         callback(data)
@@ -57,8 +45,8 @@ export class VisitService {
       }
     )
   }
-  remove(visit,callback){
-    this.obj = this.http.get(this.appvar.server+'visitremove/'+visit.id)
+  update(obj,callback){
+    this.obj = this.http.post(this.appvar.server+'offerupdate',obj)
     this.obj.subscribe(
       data => {
         callback(data)
@@ -68,4 +56,16 @@ export class VisitService {
       }
     )
   }
+  remove(obj,callback){
+    this.obj = this.http.get(this.appvar.server+'offerremove'+obj.id)
+    this.obj.subscribe(
+      data => {
+        callback(data)
+      },
+      err => {
+        callback(err)
+      }
+    )
+  }
+
 }

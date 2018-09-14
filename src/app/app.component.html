@@ -1,12 +1,12 @@
 <button mat-button [matMenuTriggerFor]="visits">Visits</button>
 
-<button mat-button [matMenuTriggerFor]="orders">Orders</button>
+<button mat-button [matMenuTriggerFor]="offers">Offers</button>
 <mat-menu #visits="matMenu">
     <button mat-menu-item routerLink="/visits">View</button>
     <button mat-menu-item routerLink="/visit-add">Add</button>
 </mat-menu>
-<mat-menu #orders="matMenu">
-    <button mat-menu-item routerLink="/">View</button>
-    <button mat-menu-item>Add</button>
+<mat-menu #offers="matMenu">
+    <button mat-menu-item routerLink="/offers">View</button>
+    <button mat-menu-item routerLink="/offer-add">Add</button>
 </mat-menu>
 <router-outlet></router-outlet>
